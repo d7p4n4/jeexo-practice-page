@@ -1,0 +1,1112 @@
+<!doctype html> 
+<html lang="en">
+  <head>
+    <!-- Required meta tags --> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <!-- Bootstrap CSS --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    
+    <!-- font fam -->
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web|Martel|Pacifico" rel="stylesheet">
+
+    <!-- icon link -->
+    <link href="https://file.myfontastic.com/YgsyJpWno5XLmxwriqWuaU/icons.css" rel="stylesheet">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>    
+    
+    
+    <title>Practice page</title> 
+  </head>
+  
+  <body>
+        
+    <!-- main styles -->
+
+    <style>
+      
+      html {
+        font-size: 11.5px;
+        padding: 0;
+        margin: 0;
+      }
+      
+      @media (min-width: 420px) {
+        html {
+          font-size: 13px;
+        }
+      }
+      
+      @media (min-width: 620px) {
+        html {
+          font-size: 15px;
+        }
+      }
+      
+      @media (min-width: 980px) {
+        html {
+          font-size: 17.5px;
+        }
+      }
+      
+      @media (min-width: 1200px) {
+        html {
+          font-size: 20px;
+        }
+      }
+    
+     a {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      a:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+    
+      *, *:after, *:before {
+        box-sizing: border-box;
+      }
+    </style>
+    
+    <style>
+      .sliding-header {
+        position: fixed;
+        z-index: 10;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background: rgb(233,128,102);
+        transition: transform .8s;
+        transition-timing-function: ease-in-out;
+      }
+      
+      .container-open .sliding-header {
+        transform: translate3d(0, -100%, 0) translate3d(0, 5rem, 0);
+        box-shadow: 0 0 1rem rgba(0,0,0,.5);
+      }
+      
+      .header-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        opacity: 1;
+        transition: opacity .8s;
+        transition-timing-function: ease-in-out;
+      }
+      
+      .container-open .header-img {
+        opacity: 0;
+      }
+      
+      .row-navbar {
+        position: fixed;
+        height: 5rem;
+        width: 100%;
+        background-color: transparent;
+        transition: margin .8s;
+        transition-timing-function: ease-in-out;
+        top: 0;
+        z-index: 20;
+      }
+      
+      .nav-title {
+        color: whitesmoke;
+        font-size: 2.5rem;
+        text-align: center;
+        font-family: "pacifico";
+        margin: 0;
+        padding: 0;
+        line-height: 2;
+      }
+      
+      .nav-menu {
+        color: whitesmoke;
+        text-align: center;
+        font-size: .8rem;
+        font-family: "pacifico";
+        padding: 0;
+        margin: 0;
+        transform-origin: center center;
+        transition: all .3s ease-in-out;
+      }
+      
+      .nav-menu:hover {
+        transform: scale3d(1.5,1.5,1);
+        color: rgb(233,210,210);
+      }
+      
+      .nav-border {
+        border-left: .1rem rgba(255,255,255,.3) solid;
+      }
+      
+      .header-title-row {
+        position: relative;
+        top: 40%;
+        transform: translate3d(0, -35%, 0);
+      }
+      
+      .map-marker {
+        text-align: center;
+        font-size: 5.5rem;
+        color: rgb(233,128,102);
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: all .8s ease-in-out;
+      }
+      
+      .header-title {
+        color: whitesmoke;
+        font-family: "pacifico";
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        line-height: 1;
+        opacity: 1;
+        transition: all .8s ease-in-out;
+      }
+      
+      .header-text {
+        color: whitesmoke;
+        font-family: martel;
+        font-size: .65rem;
+        text-align: center;
+        padding-top: 1.5rem;
+        line-height: 1.4;
+        opacity: 1;
+        transition: all .8s ease-in-out;
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+      }
+
+      button:hover circle {
+        fill: rgb(233,128,103);
+      }
+
+      .btn-row {
+        position: relative;
+        top: 20%;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        transition: all .8s ease-in-out;
+      }
+
+      .circle-btn-active circle {
+        fill: rgb(233,128,103);
+      }
+      
+      @-webkit-keyframes pulse {
+        0% {transform: scale3d(1,1,1);}
+        25% {transform: scale3d(1.1,1.1,1);}
+        50% {transform: scale3d(1,1,1);}
+        75% {transform: scale3d(0.9,0.9,1);}
+        100% {transform: scale3d(1,1,1);}
+      }
+      
+      .open-button {
+        display: block;
+        font-size: 3rem;
+        text-align: center;
+        color: rgb(233,128,103);
+        padding: 0;
+        margin: 0;
+        transition: all .5s ease-in-out;
+        -webkit-animation-name: pulse;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+      }
+      
+      .open-button:hover {
+        transform: scale3d(1.1,1.1,1);
+        color: whitesmoke;
+        cursor: pointer;
+      }
+      
+      .container-open .open-button,
+      .container-open .header-text,
+      .container-open .btn-row,
+      .container-open .map-maker,
+      .container-open .header-title {
+        opacity: 0;
+      }
+      
+    </style>
+    
+    <div id="container" class="open-container">
+      
+      <div class="row justify-content-center row-navbar">
+        <div class="col-3 col-md-5 align-self-center">
+          <p class="nav-title">Jeexo</p>
+        </div>
+        <div class="col-8 col-md-6 align-self-center mr-md-5 pr-md-5 pl-md-0">
+          <div class="row">
+            <div class="col-2 p-0 m-0">
+            <p class="nav-menu" id="close-button"><a href="#">home</a></p>
+            </div>
+            <div class="col-2 p-0 m-0 nav-border">
+            <p class="nav-menu"><a href="#">about</a></p>
+            </div>
+            <div class="col-2 p-0 m-0 nav-border">
+            <p class="nav-menu"><a href="#">services</a></p>
+            </div>
+            <div class="col-2 p-0 m-0 nav-border">
+            <p class="nav-menu"><a href="#">portfolio</a></p>
+            </div>
+            <div class="col-2 p-0 m-0 nav-border">
+            <p class="nav-menu"><a href="#">blog</a></p>
+            </div>
+            <div class="col-2 p-0 m-0 nav-border">
+            <p class="nav-menu"><a href="#">contact</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <header class="sliding-header">
+        <img class="header-img" src="assets/wallpaper.jpg" alt="">
+  
+        <div class="row justify-content-center header-title-row">
+          <div class="col-12 m-0 p-0">
+            <p class="map-marker"><i class="fas fa-map-marker-alt"></i></p>
+          </div>
+          <div class="col-6">
+            <p class="header-title">We were here</p>
+            <p class="header-text pl-md-5 pr-md-5 text-1">Lorem ipsum dolor sit amet, quod everti pertinacia his eu, vis et vitae gloriatur definitionem. Ex graeco forensibus adipiscing sit, adhuc utinam ancillae duo ex, id utinam invidunt nec. No sed iusto virtute phaedrum, legimus albucius eam eu, eirmod animal reprimique pri in. Ad quis voluptaria elaboraret nam. Ut mea quis placerat disputando, ius iusto moderatius eu, omnesque iudicabit comprehensam vim ne.</p>
+          </div>
+          <div class="p-0 m-0 row justify-content-center btn-row">
+            <div class="col-3 col-lg-1 align-self-center p-0 m-0">
+              <button class="btn-1 circle-btn-active" rel="text-1">
+                <svg height=".5rem" width=".5rem">
+                  <circle cx=".25rem" cy=".25rem" r=".2rem" stroke="rgb(210,210,210)" stroke-width=".1rem" fill="none"/>
+                </svg>
+              </button>
+              <button class="btn-2">
+                <svg height=".5rem" width=".5rem">
+                  <circle cx=".25rem" cy=".25rem" r=".2rem" stroke="rgb(210,210,210)" stroke-width=".1rem" fill="none"/>
+                </svg>
+              </button>
+              <button class="btn-3">
+                <svg height=".5rem" width=".5rem">
+                  <circle cx=".25rem" cy=".25rem" r=".2rem" stroke="rgb(210,210,210)" stroke-width=".1rem" fill="none"/>
+                </svg>
+              </button>
+              <p class="header-text p-0 m-0 mt-4">View Portfolio</p>
+            </div>
+          </div>
+          <p class="open-button" id="open-button">
+            <i class="fas fa-arrow-circle-down"></i>
+          </p>
+          </div>
+        </div>
+
+    </header>
+    
+    <style>
+      .wrapper-1 {
+        background-color: rgb(233,128,103);
+        padding: 8rem 0 12rem 0;
+        width: 100%;
+        height: auto;
+      }
+      
+      .do-title, .project-title, .team-title, .blog-title, .follow-title, .contact-title {
+        color: white;
+        font-family: pacifico;
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+      }
+    </style>
+    
+    <div class="wrapper-1">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <p class="do-title">What we do?</p>
+        </div>
+      </div>
+    </div>
+    
+    <style>
+      .wrapper-2 {
+        padding: 0 3rem;
+      }
+      
+      @media (min-width: 768px) {
+        .wrapper-2 {
+          padding: 0 6rem;
+        }
+      }
+      .capsula {
+        width: 10rem;
+        height: 10rem;
+        background-color: rgb(233,128,103);
+        border: .8rem solid white;
+        border-radius: 50%;
+        position: relative;
+        left: calc(50% - 5rem);
+        transform: translateY(-50%);
+        text-align: center;
+      }
+      
+      .fa-bus,
+      .fa-ship,
+      .fa-space-shuttle,
+      .fa-train {
+        color: white;
+        font-size: 4rem;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .capsula-container, .blog-container {
+        width: 10rem;
+        height: auto;
+        background-color: transparent;
+        margin-top: -5rem;
+        margin-bottom: 6rem;
+        position: relative;
+        left: calc(50% - 5rem);
+      }
+      
+      .capsula-title {
+        color: rgb(255,50,50);
+        font-family: pacifico;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      
+      .capsula-text, .blog-container-text, .contact-text {
+        color: rgba(0,0,0,.5);
+        font-family: "martel";
+        font-size: .65rem;
+        text-align: center;
+      }
+      
+      .capsula-btn {
+        width: 4rem;
+        height: 1.5rem;
+        background-color: rgba(0,0,0,.3);
+        text-align: center;
+        font-family: "istok web";
+        font-size: .85rem;
+        padding-top: .2rem;
+        color: white;
+        position: relative;
+        left: calc(50% - 2rem);
+        border-radius: .3rem;
+      }
+    </style>
+    
+    <div class="wrapper-2">
+    
+      <div class="row justify-content-center m-0 p-0 mr-lg-5 ml-lg-5 mb-5">
+        <div class="col-5 col-md-3">
+          <div class="capsula">
+            <i class="fas fa-bus"></i>
+          </div>
+          <div class="capsula-container">
+            <p class="capsula-title">Exercitation</p>
+            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex. Per id fabulas cotidieque, pri ne dico facilisis scripserit, sit detracto similique ut. Cu iusto consul consectetuer quo.</p>
+            <div class="capsula-btn">More</div>
+          </div>
+        </div>
+        <div class="col-5 col-md-3">
+          <div class="capsula">
+            <i class="fas fa-train"></i>
+          </div>
+          <div class="capsula-container">
+            <p class="capsula-title">Blanditiis</p>
+            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex. Per id fabulas cotidieque, pri ne dico facilisis scripserit, sit detracto similique ut. Cu iusto consul consectetuer quo.</p>
+            <div class="capsula-btn">More</div>
+          </div>
+        </div>
+        <div class="col-5 col-md-3">
+          <div class="capsula">
+            <i class="fas fa-space-shuttle"></i>
+          </div>
+          <div class="capsula-container">
+            <p class="capsula-title">Voluptatu</p>
+            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex. Per id fabulas cotidieque, pri ne dico facilisis scripserit, sit detracto similique ut. Cu iusto consul consectetuer quo.</p>
+            <div class="capsula-btn">More</div>
+          </div>
+        </div>
+        <div class="col-5 col-md-3">
+          <div class="capsula">
+            <i class="fas fa-ship"></i>
+          </div>
+          <div class="capsula-container">
+            <p class="capsula-title">Corrupti</p>
+            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex. Per id fabulas cotidieque, pri ne dico facilisis scripserit, sit detracto similique ut. Cu iusto consul consectetuer quo.</p>
+            <div class="capsula-btn">More</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <style>
+      .wrapper-3 {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+      }
+      
+      .project-title, .follow-title {
+        color: rgb(233,128,103);
+      }
+      
+      .project-container {
+        width: 7rem;
+        height: 7rem;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: black;
+        position: relative;
+        left: calc(50% - 3.5rem);
+      }
+
+      .project-items-container {
+        width: 100%;
+        height: 50%;
+        background: transparent;
+        text-align: center;
+        position: absolute;
+        top: 20%;
+        left: 0;
+      }
+      
+      .row-project-img-2 .project-container {
+        box-sizing: content-box;
+        border: .8rem white solid;
+        left: calc(50% - 4.3rem);
+        position: relative;
+      }
+      
+      @media (min-width: 576px) {
+        .project-container {
+          width: 10rem;
+          height: 10rem;
+          left: calc(50% - 5rem);
+        }
+        
+        .project-items-container {
+          top: 30%;
+        }
+        
+        .row-project-img-2 .project-container {
+          left: calc(50% - 5.8rem);
+        }
+      }
+
+      @media (min-width: 768px) {
+        .project-container {
+          width: 12rem;
+          height: 12rem;
+          left: calc(50% - 6rem);
+        }
+        
+        .project-items-container {
+          top: 40%;
+        }
+        
+        .row-project-img-2 .project-container {
+          left: calc(50% - 6.8rem);
+        }
+      }
+      
+      .project-img {
+        height: 100%;
+        width: auto;
+        transform: scale3d(1.2,1.2,1);
+        transition: all .5s ease-in-out;
+        position: relative;
+        text-align: center;
+        transform-origin: center center;
+      }
+      
+      .project-img-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: .1rem solid rgb(210,210,210);
+        border-radius: 50%;
+        opacity: 0;
+        display: inline-block;
+        transition: all .6s ease-in-out;
+      }
+      
+      .project-img-title {
+        text-align: center;
+        font-family: pacifico;
+        color: rgb(210,210,210);
+        font-size: 1rem;
+        opacity: 0;
+        transition: all .6s ease-in-out;
+      }
+      
+      .fa-heart,
+      .fa-search {
+        color: rgb(210,210,210);
+        font-size: .85rem;
+        position: relative;
+        transform: translateY(-20%);
+      }
+      
+      .project-container:hover .project-img {
+        transform: scale3d(1,1,1);
+        opacity: .7;
+        cursor: pointer;
+      }
+      
+      .project-container:hover .project-img-icon,
+      .project-container:hover .project-img-title {
+        opacity: 1;
+      }
+      
+      .row-project-img-2 {
+        transform: translateY(50%);
+      }
+    </style>
+    
+    <div class="wrapper-3">
+    
+      <div class="row justify-content-center mb-5 m-0 p-0">
+        <div class="col-6 m-0 p-0">
+          <p class="project-title">Look at the projects</p>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center mr-5 ml-5 m-0 p-0">
+        <div class="col-4">
+          <div class="project-container">
+            <img src="assets/img01.jpeg" alt="" class="project-img"/>
+            <div class="project-items-container">
+              <div class="project-img-icon"><i class="fas fa-search"></i></div>
+              <div class="project-img-icon"><i class="fas fa-heart"></i></div>
+              <p class="project-img-title">Tempor Incididunt</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="project-container">
+            <img src="assets/img02.jpg" alt="" class="project-img"/>
+            <div class="project-items-container">
+              <div class="project-img-icon"><i class="fas fa-search"></i></div>
+              <div class="project-img-icon"><i class="fas fa-heart"></i></div>
+              <p class="project-img-title">Tempor Incididunt</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="project-container">
+            <img src="assets/img03.jpg" alt="" class="project-img"/>
+            <div class="project-items-container">
+              <div class="project-img-icon"><i class="fas fa-search"></i></div>
+              <div class="project-img-icon"><i class="fas fa-heart"></i></div>
+              <p class="project-img-title">Tempor Incididunt</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mr-5 ml-5 m-0 p-0 row-project-img-2">
+        <div class="col-4">
+          <div class="project-container">
+            <img src="assets/img04.jpg" alt="" class="project-img"/>
+            <div class="project-items-container">
+              <div class="project-img-icon"><i class="fas fa-search"></i></div>
+              <div class="project-img-icon"><i class="fas fa-heart"></i></div>
+              <p class="project-img-title">Tempor Incididunt</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="project-container">
+            <img src="assets/img05.jpg" alt="" class="project-img"/>
+            <div class="project-items-container">
+              <div class="project-img-icon"><i class="fas fa-search"></i></div>
+              <div class="project-img-icon"><i class="fas fa-heart"></i></div>
+              <p class="project-img-title">Tempor Incididunt</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="project-container">
+            <img src="assets/img06.jpg" alt="" class="project-img"/>
+            <div class="project-items-container">
+              <div class="project-img-icon"><i class="fas fa-search"></i></div>
+              <div class="project-img-icon"><i class="fas fa-heart"></i></div>
+              <p class="project-img-title">Tempor Incididunt</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    <style>
+      .wrapper-4 {
+        width: 100%;
+        height: auto;
+        padding: 9rem 0 10rem 0;
+        background-color: rgb(233,128,103);
+      }
+      
+      .team-row .capsula {
+        transform: translateY(0);
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+      }
+      
+      .team-row .capsula-container {
+        background-color: white;
+        border-radius: 0 0 5rem 5rem;
+        margin-top: -5rem;
+        padding: 5rem .5rem .5rem .5rem;
+      }
+      
+      .team-row .capsula-title {
+        font-size: 1rem;
+        color: black;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        transition: all .3s ease-in-out;
+      }
+      
+      .team-little-title {
+        font-family: "istok web";
+        color: rgb(77,77,77);
+        font-size: .45rem;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+        line-height: .4rem;
+      }
+      
+      .team-icon {
+        text-align: center;
+        color: rgb(133,133,133);
+      }
+      
+      .fa-facebook-f:hover,
+      .fa-twitter:hover{
+        color: rgb(255,50,50);
+        transform: scale3d(1.1,1.1,1);
+        cursor: pointer;
+      }
+      
+      .fa-facebook-f {
+        margin-right: .5rem;
+      }
+      
+      .team-img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        transform-origin: center center;
+        transition: all .3s ease-in-out;
+      }
+      
+      .team-row .team-capsula:hover .capsula-title {
+        color: rgb(255,50,50);
+      }
+
+      .team-row .team-capsula:hover .team-img {
+        border: rgb(255,50,50) .1rem solid;
+      }
+      
+      .blog-title-col {
+        text-align: center;
+      }
+    </style>
+    
+    <div class="wrapper-4">
+    
+      <div class="row justify-content-center mt-5 mb-5 pt-5 pb-5">
+        <div class="col-6">
+          <p class="team-title">Meet our team</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center m-0 p-0 mr-lg-5 ml-lg-5 mb-5 mt-5 team-row">
+        <div class="col-5 col-md-3 team-capsula">
+          <div class="capsula">
+            <img class="team-img" src="assets/face03.jpg" alt=""/>
+          </div>
+          <div class="capsula-container">
+            <p class="capsula-title">Lance Sorre</p>
+            <p class="team-little-title">Web developer</p>
+            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex.</p>
+            <p class="team-icon"><i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i></p>
+          </div>
+        </div>
+        <div class="col-5 col-md-3 team-capsula">
+          <div class="capsula">
+            <img class="team-img" src="assets/face02.jpg" alt=""/>
+          </div>
+          <div class="capsula-container">
+            <p class="capsula-title">Erik Woldt</p>
+            <p class="team-little-title">Web developer</p>
+            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex.</p>
+            <p class="team-icon"><i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i></p>
+          </div>
+        </div>
+        <div class="col-5 col-md-3 team-capsula">
+          <div class="capsula">
+            <img class="team-img" src="assets/face01.jpg" alt=""/>
+          </div>
+          <div class="capsula-container">
+            <p class="capsula-title">Julianne Diors</p>
+            <p class="team-little-title">Programmer</p>
+            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex.</p>
+            <p class="team-icon"><i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i></p>
+          </div>
+        </div>
+        <div class="col-5 col-md-3 team-capsula">
+          <div class="capsula">
+            <img class="team-img" src="assets/face04.jpg" alt=""/>
+          </div>
+          <div class="capsula-container">
+            <p class="capsula-title">Fernando Barch</p>
+            <p class="team-little-title">Designer</p>
+            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex.</p>
+            <p class="team-icon"><i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center m-0 p-0 mb-5">
+        <div class="col-6 blog-title-col">
+          <p class="blog-title">Blog</p>
+        </div>
+      </div>
+    
+    </div>
+    
+    <style>
+      .row-blog-imgs .project-container {
+        transform: translateY(-50%);
+      }
+      
+      .row-blog-imgs .project-container {
+        border: .8rem white solid;
+        box-sizing: content-box;
+        left: calc(50% - 4.3rem);
+      }
+      
+      @media (min-width: 576px) {
+        .row-blog-imgs .project-container {
+          left: calc(50% - 5.8rem);
+        }
+      }
+      
+      @media (min-width: 768px) {
+        .row-blog-imgs .project-container {
+          left: calc(50% - 6.8rem);
+        }      
+      }
+      
+      .row-blog-imgs .project-img-icon {
+        height: 3.5rem;
+        width: 3.5rem;
+        border: none;
+        background-color: rgb(233,128,103);
+        text-align: center;
+        color: white;
+        font-family: "istok web";
+        font-size: 1rem;
+        padding-top: 1rem;
+      }
+      
+      .blog-rate {
+        padding: 0;
+        margin: 0;
+      }
+      
+      .blog-img-title {
+        font-size: .55rem;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .blog-container {
+        width: 7rem;
+        position: relative;
+        left: calc(50% - 3.5rem);
+        padding: 0;
+        margin: 0;
+        margin-top: -3.5rem;
+      }
+      
+      @media (min-width: 576px) {
+        .blog-container {
+          width: 10rem;
+          left: calc(50% - 5rem);
+          margin-top: -5rem;
+        }
+      }
+      
+      @media (min-width: 768px) {
+        .blog-container {
+          width: 12rem;
+          left: calc(50% - 6rem);
+          margin-top: -6rem;
+        }
+      }
+      
+      .blog-container-title {
+        color: rgb(233,128,103);
+        line-height: 1.2;
+        font-size: 1rem;
+        font-family: "pacifico";
+        text-align: center;
+      }
+      
+      .follow-title {
+        margin-bottom: 3rem;
+      }
+    </style>
+    
+    <div class="wrapper-5">
+    
+      <div class="row justify-content-center mr-5 ml-5 m-0 p-0 row-blog-imgs">
+        <div class="col-4 m-0 p-0">
+          <div class="project-container">
+            <img src="assets/img07.jpg" alt="" class="project-img"/>
+            <div class="project-items-container">
+              <div class="project-img-icon">
+                <p class="blog-img-title">Rate</p>
+                <p class="blog-rate">9.3</p>
+              </div>
+            </div>
+          </div>
+          <div class="blog-container p-0">
+            <p class="blog-container-title">Eu fugit maiorum molestiae cum.</p>
+            <p class="blog-container-text">Minim error appellantur vel ei, eum nonumes antiopam delicatissimi ne. Ridens dignissim hendrerit eu his, ea pri harum consectetuer, id brute sadipscing mel.</p>
+            <div class="capsula-btn">More</div>
+          </div>
+        </div>
+        <div class="col-4 m-0 p-0">
+          <div class="project-container">
+            <img src="assets/img08.jpg" alt="" class="project-img"/>
+            <div class="project-items-container">
+              <div class="project-img-icon">
+                <p class="blog-img-title">Rate</p>
+                <p class="blog-rate">9.3</p></div>
+            </div>
+          </div>
+          <div class="blog-container p-0">
+            <p class="blog-container-title">Eu fugit maiorum molestiae cum.</p>
+            <p class="blog-container-text">Minim error appellantur vel ei, eum nonumes antiopam delicatissimi ne. Ridens dignissim hendrerit eu his, ea pri harum consectetuer, id brute sadipscing mel.</p>
+            <div class="capsula-btn">More</div>
+          </div>
+        </div>
+        <div class="col-4 m-0 p-0">
+          <div class="project-container">
+            <img src="assets/img09.jpg" alt="" class="project-img"/>
+            <div class="project-items-container">
+              <div class="project-img-icon">
+                <p class="blog-img-title">Rate</p>
+                <p class="blog-rate">9.3</p>
+              </div>
+            </div>
+          </div>
+          <div class="blog-container p-0">
+            <p class="blog-container-title">Eu fugit maiorum molestiae cum.</p>
+            <p class="blog-container-text">Minim error appellantur vel ei, eum nonumes antiopam delicatissimi ne. Ridens dignissim hendrerit eu his, ea pri harum consectetuer, id brute sadipscing mel.</p>
+            <div class="capsula-btn">More</div>
+          </div>
+        </div>
+        </div>
+      
+      <div class="row justify-content-center mt-5 pt-5 mb-5 pb-5">
+        <div class="col-6">
+          <p class="follow-title">Follow us</p>
+        </div>
+      </div>
+    
+      </div>
+    
+    <style>
+      .wrapper-6 {
+        width: 100%;
+        height: auto;
+        padding: 0rem 0 2rem 0;
+        background-color: rgb(233,128,103);
+        margin: 0;
+      }
+      
+      .follow-row .capsula {
+        transform: translateY(-50%);
+        margin: 0;
+        transition: all .3s ease-in-out;
+      }
+      
+      .follow-row .capsula:hover {
+        cursor: pointer;
+        transform: scale3d(1.1,1.1,1) translateY(-45%);
+      }
+      
+      .follow-row .fa-facebook-f,
+      .follow-row .fa-twitter,
+      .fa-basketball-ball,
+      .fa-camera-retro {
+        color: white;
+        font-size: 4rem;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .contact-input {
+        border: none;
+        border-radius: .2rem;
+        color: rgb(133,133,133);
+        font-family: "istok web";
+        margin-top: 1rem;
+        width: 100%;
+        padding: .5rem .5rem;
+      }
+      
+      .envelope-container {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color: white;
+        margin-top: 1rem;
+        position: relative;
+        left: calc(50% - 1.25rem);
+      }
+      
+      .fa-envelope {
+        color: rgb(233,128,103);
+        position: relative;
+        top: 50%;
+        transform: translateY(-75%);
+        margin: 0;
+        padding: 0;
+      }
+      
+      .contact-text {
+        color: white;
+      }
+    </style>
+    
+    <div class="wrapper-6">
+    
+      <div class="row justify-content-center mt-5 m-0 p-0 mr-lg-5 ml-lg-5 follow-row">
+        <div class="col-5 col-md-3 mb-5 m-md-0">
+          <div class="capsula">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+        </div>
+        <div class="col-5 col-md-3 mb-5 m-md-0">
+          <div class="capsula">
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+        <div class="col-5 col-md-3">
+          <div class="capsula">
+            <i class="fas fa-basketball-ball"></i>
+          </div>
+        </div>
+        <div class="col-5 col-md-3">
+          <div class="capsula">
+            <i class="fas fa-camera-retro"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-6 col-md-3">
+          <p class="contact-title">Contact us</p>
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <form method="post" action="">
+                <input type="text" name="name" placeholder="Email" class="contact-input"/>
+                <textarea rows="4" placeholder="Comment" class="contact-input"></textarea>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-12" style="text-align: center;">
+          <div class="envelope-container"><i class="fas fa-envelope"></i></div>
+        </div>
+        <div class="col-6 col-md-3 mt-4">
+          <p class="contact-text">Hungary, 3000, Hatvan, Kitudja utca 23.</p>
+          <p class="contact-text">Eu fugit maiorum molestiae cum, in mel clita facete mediocrem, putent elaboraret mel ne. Legere electram mea no.</p>
+        </div>   
+      </div>
+          
+    </div>
+    
+    <style>
+      .wrapper-7 {
+        width: 100%;
+        height: 10rem;
+        background-image: url(assets/map.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: inset 0 15px 25px rgb(0,0,0,.3);
+      }
+    </style>
+    
+    <div class="wrapper-7"></div>
+    
+    </div>
+    
+  <script>
+    window.onload = function() {
+      
+      $('#open-button').on('click', function() {
+        $('#container').addClass('container-open');
+        window.removeEventListener("scroll", noscroll);
+      });
+      
+      $('#close-button').on('click', function() {
+        $('#container').removeClass('container-open');
+        window.addEventListener("scroll", noscroll);
+      })
+      
+      function noscroll() {
+        window.scrollTo(0,0);
+      }
+        
+      // reset scrolling position
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+        
+      // disable scrolling 
+      window.addEventListener('scroll', noscroll);
+    }();
+  </script>
+    
+    
+     <!-- Optional JavaScript --> 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  </body> 
+</html>
