@@ -19,9 +19,6 @@
     
     
     <title>Practice page</title> 
-  </head>
-  
-  <body>
         
     <!-- main styles -->
 
@@ -33,19 +30,19 @@
         margin: 0;
       }
       
-      @media (min-width: 420px) {
+      @media (min-width: 576px) {
         html {
           font-size: 13px;
         }
       }
       
-      @media (min-width: 620px) {
+      @media (min-width: 768px) {
         html {
           font-size: 15px;
         }
       }
       
-      @media (min-width: 980px) {
+      @media (min-width: 992px) {
         html {
           font-size: 17.5px;
         }
@@ -70,9 +67,7 @@
       *, *:after, *:before {
         box-sizing: border-box;
       }
-    </style>
-    
-    <style>
+      
       .sliding-header {
         position: fixed;
         z-index: 10;
@@ -178,10 +173,10 @@
       .header-text {
         color: whitesmoke;
         font-family: martel;
-        font-size: .65rem;
+        font-size: .85rem;
         text-align: center;
         padding-top: 1.5rem;
-        line-height: 1.4;
+        line-height: 1.2;
         opacity: 1;
         transition: all .8s ease-in-out;
       }
@@ -245,78 +240,6 @@
         opacity: 0;
       }
       
-    </style>
-    
-    <div id="container" class="open-container">
-      
-      <div class="row justify-content-center row-navbar">
-        <div class="col-3 col-md-5 align-self-center">
-          <p class="nav-title">Jeexo</p>
-        </div>
-        <div class="col-8 col-md-6 align-self-center mr-md-5 pr-md-5 pl-md-0">
-          <div class="row">
-            <div class="col-2 p-0 m-0">
-            <p class="nav-menu" id="close-button"><a href="#">home</a></p>
-            </div>
-            <div class="col-2 p-0 m-0 nav-border">
-            <p class="nav-menu"><a href="#">about</a></p>
-            </div>
-            <div class="col-2 p-0 m-0 nav-border">
-            <p class="nav-menu"><a href="#">services</a></p>
-            </div>
-            <div class="col-2 p-0 m-0 nav-border">
-            <p class="nav-menu"><a href="#">portfolio</a></p>
-            </div>
-            <div class="col-2 p-0 m-0 nav-border">
-            <p class="nav-menu"><a href="#">blog</a></p>
-            </div>
-            <div class="col-2 p-0 m-0 nav-border">
-            <p class="nav-menu"><a href="#">contact</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <header class="sliding-header">
-        <img class="header-img" src="assets/wallpaper.jpg" alt="">
-  
-        <div class="row justify-content-center header-title-row">
-          <div class="col-12 m-0 p-0">
-            <p class="map-marker"><i class="fas fa-map-marker-alt"></i></p>
-          </div>
-          <div class="col-6">
-            <p class="header-title">We were here</p>
-            <p class="header-text pl-md-5 pr-md-5 text-1">Lorem ipsum dolor sit amet, quod everti pertinacia his eu, vis et vitae gloriatur definitionem. Ex graeco forensibus adipiscing sit, adhuc utinam ancillae duo ex, id utinam invidunt nec. No sed iusto virtute phaedrum, legimus albucius eam eu, eirmod animal reprimique pri in. Ad quis voluptaria elaboraret nam. Ut mea quis placerat disputando, ius iusto moderatius eu, omnesque iudicabit comprehensam vim ne.</p>
-          </div>
-          <div class="p-0 m-0 row justify-content-center btn-row">
-            <div class="col-3 col-lg-1 align-self-center p-0 m-0">
-              <button class="btn-1 circle-btn-active" rel="text-1">
-                <svg height=".5rem" width=".5rem">
-                  <circle cx=".25rem" cy=".25rem" r=".2rem" stroke="rgb(210,210,210)" stroke-width=".1rem" fill="none"/>
-                </svg>
-              </button>
-              <button class="btn-2">
-                <svg height=".5rem" width=".5rem">
-                  <circle cx=".25rem" cy=".25rem" r=".2rem" stroke="rgb(210,210,210)" stroke-width=".1rem" fill="none"/>
-                </svg>
-              </button>
-              <button class="btn-3">
-                <svg height=".5rem" width=".5rem">
-                  <circle cx=".25rem" cy=".25rem" r=".2rem" stroke="rgb(210,210,210)" stroke-width=".1rem" fill="none"/>
-                </svg>
-              </button>
-              <p class="header-text p-0 m-0 mt-4">View Portfolio</p>
-            </div>
-          </div>
-          <p class="open-button" id="open-button">
-            <i class="fas fa-arrow-circle-down"></i>
-          </p>
-          </div>
-        </div>
-
-    </header>
-    
-    <style>
       .wrapper-1 {
         background-color: rgb(233,128,103);
         padding: 8rem 0 12rem 0;
@@ -333,17 +256,7 @@
         padding: 0;
         line-height: 1;
       }
-    </style>
     
-    <div class="wrapper-1">
-      <div class="row justify-content-center">
-        <div class="col-6">
-          <p class="do-title">What we do?</p>
-        </div>
-      </div>
-    </div>
-    
-    <style>
       .wrapper-2 {
         padding: 0 3rem;
       }
@@ -353,6 +266,7 @@
           padding: 0 6rem;
         }
       }
+      
       .capsula {
         width: 10rem;
         height: 10rem;
@@ -396,8 +310,9 @@
       .capsula-text, .blog-container-text, .contact-text {
         color: rgba(0,0,0,.5);
         font-family: "martel";
-        font-size: .65rem;
+        font-size: .85rem;
         text-align: center;
+        line-height: 1.4;
       }
       
       .capsula-btn {
@@ -413,56 +328,7 @@
         left: calc(50% - 2rem);
         border-radius: .3rem;
       }
-    </style>
-    
-    <div class="wrapper-2">
-    
-      <div class="row justify-content-center m-0 p-0 mr-lg-5 ml-lg-5 mb-5">
-        <div class="col-5 col-md-3">
-          <div class="capsula">
-            <i class="fas fa-bus"></i>
-          </div>
-          <div class="capsula-container">
-            <p class="capsula-title">Exercitation</p>
-            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex. Per id fabulas cotidieque, pri ne dico facilisis scripserit, sit detracto similique ut. Cu iusto consul consectetuer quo.</p>
-            <div class="capsula-btn">More</div>
-          </div>
-        </div>
-        <div class="col-5 col-md-3">
-          <div class="capsula">
-            <i class="fas fa-train"></i>
-          </div>
-          <div class="capsula-container">
-            <p class="capsula-title">Blanditiis</p>
-            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex. Per id fabulas cotidieque, pri ne dico facilisis scripserit, sit detracto similique ut. Cu iusto consul consectetuer quo.</p>
-            <div class="capsula-btn">More</div>
-          </div>
-        </div>
-        <div class="col-5 col-md-3">
-          <div class="capsula">
-            <i class="fas fa-space-shuttle"></i>
-          </div>
-          <div class="capsula-container">
-            <p class="capsula-title">Voluptatu</p>
-            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex. Per id fabulas cotidieque, pri ne dico facilisis scripserit, sit detracto similique ut. Cu iusto consul consectetuer quo.</p>
-            <div class="capsula-btn">More</div>
-          </div>
-        </div>
-        <div class="col-5 col-md-3">
-          <div class="capsula">
-            <i class="fas fa-ship"></i>
-          </div>
-          <div class="capsula-container">
-            <p class="capsula-title">Corrupti</p>
-            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex. Per id fabulas cotidieque, pri ne dico facilisis scripserit, sit detracto similique ut. Cu iusto consul consectetuer quo.</p>
-            <div class="capsula-btn">More</div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-    
-    <style>
+ 
       .wrapper-3 {
         padding: 0;
         margin: 0;
@@ -561,6 +427,7 @@
         font-size: 1rem;
         opacity: 0;
         transition: all .6s ease-in-out;
+        line-height: 1.2;
       }
       
       .fa-heart,
@@ -585,7 +452,372 @@
       .row-project-img-2 {
         transform: translateY(50%);
       }
+      
+      .wrapper-4 {
+        width: 100%;
+        height: auto;
+        padding: 9rem 0 10rem 0;
+        background-color: rgb(233,128,103);
+      }
+      
+      .team-row .capsula {
+        transform: translateY(0);
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+      }
+      
+      .team-row .capsula-container {
+        background-color: white;
+        border-radius: 0 0 5rem 5rem;
+        margin-top: -5rem;
+        padding: 5rem .5rem .5rem .5rem;
+      }
+      
+      .team-row .capsula-title {
+        font-size: 1rem;
+        color: black;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        transition: all .3s ease-in-out;
+      }
+      
+      .team-little-title {
+        font-family: "istok web";
+        color: rgb(77,77,77);
+        font-size: .65rem;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+        line-height: .65rem;
+      }
+      
+      .team-icon {
+        text-align: center;
+        color: rgb(133,133,133);
+      }
+      
+      .fa-facebook-f:hover,
+      .fa-twitter:hover{
+        color: rgb(255,50,50);
+        transform: scale3d(1.1,1.1,1);
+        cursor: pointer;
+      }
+      
+      .fa-facebook-f {
+        margin-right: .5rem;
+      }
+      
+      .team-img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        transform-origin: center center;
+        transition: all .3s ease-in-out;
+      }
+      
+      .team-row .team-capsula:hover .capsula-title {
+        color: rgb(255,50,50);
+      }
+
+      .team-row .team-capsula:hover .team-img {
+        border: rgb(255,50,50) .1rem solid;
+      }
+      
+      .blog-title-col {
+        text-align: center;
+      }
+      
+      .row-blog-imgs .project-container {
+        transform: translateY(-50%);
+      }
+      
+      .row-blog-imgs .project-container {
+        border: .8rem white solid;
+        box-sizing: content-box;
+        left: calc(50% - 4.3rem);
+      }
+      
+      @media (min-width: 576px) {
+        .row-blog-imgs .project-container {
+          left: calc(50% - 5.8rem);
+        }
+      }
+      
+      @media (min-width: 768px) {
+        .row-blog-imgs .project-container {
+          left: calc(50% - 6.8rem);
+        }      
+      }
+      
+      .row-blog-imgs .project-img-icon {
+        height: 3.5rem;
+        width: 3.5rem;
+        border: none;
+        background-color: rgb(233,128,103);
+        text-align: center;
+        color: white;
+        font-family: "istok web";
+        font-size: 1rem;
+        padding-top: 1rem;
+      }
+      
+      .blog-rate {
+        padding: 0;
+        margin: 0;
+      }
+      
+      .blog-img-title {
+        font-size: .55rem;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .blog-container {
+        width: 7rem;
+        position: relative;
+        left: calc(50% - 3.5rem);
+        padding: 0;
+        margin: 0;
+        margin-top: -3.5rem;
+      }
+      
+      @media (min-width: 576px) {
+        .blog-container {
+          width: 10rem;
+          left: calc(50% - 5rem);
+          margin-top: -5rem;
+        }
+      }
+      
+      @media (min-width: 768px) {
+        .blog-container {
+          width: 12rem;
+          left: calc(50% - 6rem);
+          margin-top: -6rem;
+        }
+      }
+      
+      .blog-container-title {
+        color: rgb(233,128,103);
+        line-height: 1.2;
+        font-size: 1.2rem;
+        font-family: "pacifico";
+        text-align: center;
+      }
+      
+      .follow-title {
+        margin-bottom: 3rem;
+      }
+      
+      .wrapper-6 {
+        width: 100%;
+        height: auto;
+        padding: 0rem 0 2rem 0;
+        background-color: rgb(233,128,103);
+        margin: 0;
+      }
+      
+      .follow-row .capsula {
+        transform: translateY(-50%);
+        margin: 0;
+        transition: all .3s ease-in-out;
+      }
+      
+      .follow-row .capsula:hover {
+        cursor: pointer;
+        transform: scale3d(1.1,1.1,1) translateY(-45%);
+      }
+      
+      .follow-row .fa-facebook-f,
+      .follow-row .fa-twitter,
+      .fa-basketball-ball,
+      .fa-camera-retro {
+        color: white;
+        font-size: 4rem;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .contact-input {
+        border: none;
+        border-radius: .2rem;
+        color: rgb(133,133,133);
+        font-family: "istok web";
+        width: 100%;
+        padding: .5rem .5rem;
+        margin: 1rem 0 0 0;
+      }
+      
+      .envelope-container {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color: white;
+        margin-top: 1rem;
+        position: relative;
+        left: calc(50% - 1.25rem);
+      }
+      
+      .fa-envelope {
+        color: rgb(233,128,103);
+        position: relative;
+        top: 50%;
+        transform: translateY(-75%);
+        margin: 0;
+        padding: 0;
+      }
+      
+      .contact-text {
+        color: white;
+      }
+      
+      .wrapper-7 {
+        width: 100%;
+        height: 10rem;
+        background-image: url(assets/map.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: inset 0 15px 25px rgb(0,0,0,.3);
+      }
+      
+      .row {
+        margin-right: 0px;
+      }
     </style>
+    
+  </head>
+  
+  <body>
+    
+    <div id="container" class="open-container">
+      
+      <div class="row justify-content-center row-navbar">
+        <div class="col-3 col-md-5 align-self-center">
+          <p class="nav-title">Jeexo</p>
+        </div>
+        <div class="col-8 col-md-6 align-self-center mr-md-5 pr-md-5 pl-md-0 pr-0 mr-0">
+          <div class="row justify-content-end">
+            <div class="col-2 p-0 m-0">
+            <p class="nav-menu" id="close-button"><a href="#">home</a></p>
+            </div>
+            <div class="col-2 p-0 m-0 nav-border">
+            <p class="nav-menu"><a href="#about">about</a></p>
+            </div>
+            <div class="col-2 p-0 m-0 nav-border">
+            <p class="nav-menu"><a href="#">services</a></p>
+            </div>
+            <div class="col-2 p-0 m-0 nav-border">
+            <p class="nav-menu"><a href="#portfolio">portfolio</a></p>
+            </div>
+            <div class="col-2 p-0 m-0 nav-border">
+            <p class="nav-menu"><a href="#blog">blog</a></p>
+            </div>
+            <div class="col-2 p-0 m-0 nav-border">
+            <p class="nav-menu"><a href="#contact-title">contact</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <header class="sliding-header">
+        <img class="header-img" src="assets/wallpaper.jpg" alt="">
+  
+        <div class="row justify-content-center header-title-row">
+          <div class="col-12 m-0 p-0">
+            <p class="map-marker"><i class="fas fa-map-marker-alt"></i></p>
+          </div>
+          <div class="col-9 col-md-6">
+            <p class="header-title">We were here</p>
+            <p class="header-text pl-md-5 pr-md-5 text-1">Lorem ipsum dolor sit amet, quod everti pertinacia his eu, vis et vitae gloriatur definitionem. Ex graeco forensibus adipiscing sit, adhuc utinam ancillae duo ex, id utinam invidunt nec. No sed iusto virtute phaedrum, legimus albucius eam eu, eirmod animal reprimique pri in. Ad quis voluptaria elaboraret nam. Ut mea quis placerat disputando, ius iusto moderatius eu, omnesque iudicabit comprehensam vim ne.</p>
+          </div>
+          <div class="p-0 m-0 row justify-content-center btn-row">
+            <div class="col-3 col-lg-1 align-self-center p-0 m-0">
+              <button class="btn-1 circle-btn-active" rel="text-1">
+                <svg height=".5rem" width=".5rem">
+                  <circle cx=".25rem" cy=".25rem" r=".2rem" stroke="rgb(210,210,210)" stroke-width=".1rem" fill="none"/>
+                </svg>
+              </button>
+              <button class="btn-2">
+                <svg height=".5rem" width=".5rem">
+                  <circle cx=".25rem" cy=".25rem" r=".2rem" stroke="rgb(210,210,210)" stroke-width=".1rem" fill="none"/>
+                </svg>
+              </button>
+              <button class="btn-3">
+                <svg height=".5rem" width=".5rem">
+                  <circle cx=".25rem" cy=".25rem" r=".2rem" stroke="rgb(210,210,210)" stroke-width=".1rem" fill="none"/>
+                </svg>
+              </button>
+              <p class="header-text p-0 m-0 mt-4">View Portfolio</p>
+            </div>
+          </div>
+          <p class="open-button" id="open-button">
+            <i class="fas fa-arrow-circle-down"></i>
+          </p>
+          </div>
+        </div>
+
+    </header>
+    
+    <a name="about"></a>
+    <div class="wrapper-1">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <p class="do-title">What we do?</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="wrapper-2">
+      
+      <div class="row justify-content-center m-0 p-0 mr-lg-5 ml-lg-5 mb-5">
+        <div class="col-6 col-md-3">
+          <div class="capsula">
+            <i class="fas fa-bus"></i>
+          </div>
+          <div class="capsula-container">
+            <p class="capsula-title">Exercitation</p>
+            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex. Per id fabulas cotidieque, pri ne dico facilisis scripserit.</p>
+            <div class="capsula-btn">More</div>
+          </div>
+        </div>
+        <div class="col-5 col-md-3">
+          <div class="capsula">
+            <i class="fas fa-train"></i>
+          </div>
+          <div class="capsula-container">
+            <p class="capsula-title">Blanditiis</p>
+            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex. Per id fabulas cotidieque, pri ne dico facilisis scripserit.</p>
+            <div class="capsula-btn">More</div>
+          </div>
+        </div>
+        <div class="col-5 col-md-3">
+          <div class="capsula">
+            <i class="fas fa-space-shuttle"></i>
+          </div>
+          <div class="capsula-container">
+            <p class="capsula-title">Voluptatu</p>
+            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex. Per id fabulas cotidieque, pri ne dico facilisis scripserit.</p>
+            <div class="capsula-btn">More</div>
+          </div>
+        </div>
+        <div class="col-5 col-md-3">
+          <div class="capsula">
+            <i class="fas fa-ship"></i>
+          </div>
+          <div class="capsula-container">
+            <p class="capsula-title">Corrupti</p>
+            <p class="capsula-text">Novum ornatus corpora per in, per causae aliquip in. Eum cu volumus honestatis, viris denique vix ex. Per id fabulas cotidieque, pri ne dico facilisis scripserit.</p>
+            <div class="capsula-btn">More</div>
+          </div>
+        </div>
+        <a name="portfolio"></a>
+      </div>
+      
+    </div>
     
     <div class="wrapper-3">
     
@@ -661,84 +893,6 @@
         </div>
       </div>
     </div>
-        
-    <style>
-      .wrapper-4 {
-        width: 100%;
-        height: auto;
-        padding: 9rem 0 10rem 0;
-        background-color: rgb(233,128,103);
-      }
-      
-      .team-row .capsula {
-        transform: translateY(0);
-        position: relative;
-        z-index: 2;
-        overflow: hidden;
-      }
-      
-      .team-row .capsula-container {
-        background-color: white;
-        border-radius: 0 0 5rem 5rem;
-        margin-top: -5rem;
-        padding: 5rem .5rem .5rem .5rem;
-      }
-      
-      .team-row .capsula-title {
-        font-size: 1rem;
-        color: black;
-        margin-bottom: 0;
-        padding-bottom: 0;
-        transition: all .3s ease-in-out;
-      }
-      
-      .team-little-title {
-        font-family: "istok web";
-        color: rgb(77,77,77);
-        font-size: .45rem;
-        padding: 0;
-        margin: 0;
-        margin-bottom: 1rem;
-        text-align: center;
-        line-height: .4rem;
-      }
-      
-      .team-icon {
-        text-align: center;
-        color: rgb(133,133,133);
-      }
-      
-      .fa-facebook-f:hover,
-      .fa-twitter:hover{
-        color: rgb(255,50,50);
-        transform: scale3d(1.1,1.1,1);
-        cursor: pointer;
-      }
-      
-      .fa-facebook-f {
-        margin-right: .5rem;
-      }
-      
-      .team-img {
-        width: 100%;
-        height: auto;
-        border-radius: 50%;
-        transform-origin: center center;
-        transition: all .3s ease-in-out;
-      }
-      
-      .team-row .team-capsula:hover .capsula-title {
-        color: rgb(255,50,50);
-      }
-
-      .team-row .team-capsula:hover .team-img {
-        border: rgb(255,50,50) .1rem solid;
-      }
-      
-      .blog-title-col {
-        text-align: center;
-      }
-    </style>
     
     <div class="wrapper-4">
     
@@ -793,6 +947,7 @@
             <p class="team-icon"><i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i></p>
           </div>
         </div>
+        <a name="blog"></a>
       </div>
       
       <div class="row justify-content-center m-0 p-0 mb-5">
@@ -802,90 +957,6 @@
       </div>
     
     </div>
-    
-    <style>
-      .row-blog-imgs .project-container {
-        transform: translateY(-50%);
-      }
-      
-      .row-blog-imgs .project-container {
-        border: .8rem white solid;
-        box-sizing: content-box;
-        left: calc(50% - 4.3rem);
-      }
-      
-      @media (min-width: 576px) {
-        .row-blog-imgs .project-container {
-          left: calc(50% - 5.8rem);
-        }
-      }
-      
-      @media (min-width: 768px) {
-        .row-blog-imgs .project-container {
-          left: calc(50% - 6.8rem);
-        }      
-      }
-      
-      .row-blog-imgs .project-img-icon {
-        height: 3.5rem;
-        width: 3.5rem;
-        border: none;
-        background-color: rgb(233,128,103);
-        text-align: center;
-        color: white;
-        font-family: "istok web";
-        font-size: 1rem;
-        padding-top: 1rem;
-      }
-      
-      .blog-rate {
-        padding: 0;
-        margin: 0;
-      }
-      
-      .blog-img-title {
-        font-size: .55rem;
-        padding: 0;
-        margin: 0;
-      }
-      
-      .blog-container {
-        width: 7rem;
-        position: relative;
-        left: calc(50% - 3.5rem);
-        padding: 0;
-        margin: 0;
-        margin-top: -3.5rem;
-      }
-      
-      @media (min-width: 576px) {
-        .blog-container {
-          width: 10rem;
-          left: calc(50% - 5rem);
-          margin-top: -5rem;
-        }
-      }
-      
-      @media (min-width: 768px) {
-        .blog-container {
-          width: 12rem;
-          left: calc(50% - 6rem);
-          margin-top: -6rem;
-        }
-      }
-      
-      .blog-container-title {
-        color: rgb(233,128,103);
-        line-height: 1.2;
-        font-size: 1rem;
-        font-family: "pacifico";
-        text-align: center;
-      }
-      
-      .follow-title {
-        margin-bottom: 3rem;
-      }
-    </style>
     
     <div class="wrapper-5">
     
@@ -947,71 +1018,6 @@
     
       </div>
     
-    <style>
-      .wrapper-6 {
-        width: 100%;
-        height: auto;
-        padding: 0rem 0 2rem 0;
-        background-color: rgb(233,128,103);
-        margin: 0;
-      }
-      
-      .follow-row .capsula {
-        transform: translateY(-50%);
-        margin: 0;
-        transition: all .3s ease-in-out;
-      }
-      
-      .follow-row .capsula:hover {
-        cursor: pointer;
-        transform: scale3d(1.1,1.1,1) translateY(-45%);
-      }
-      
-      .follow-row .fa-facebook-f,
-      .follow-row .fa-twitter,
-      .fa-basketball-ball,
-      .fa-camera-retro {
-        color: white;
-        font-size: 4rem;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      
-      .contact-input {
-        border: none;
-        border-radius: .2rem;
-        color: rgb(133,133,133);
-        font-family: "istok web";
-        margin-top: 1rem;
-        width: 100%;
-        padding: .5rem .5rem;
-      }
-      
-      .envelope-container {
-        width: 2.5rem;
-        height: 2.5rem;
-        border-radius: 50%;
-        background-color: white;
-        margin-top: 1rem;
-        position: relative;
-        left: calc(50% - 1.25rem);
-      }
-      
-      .fa-envelope {
-        color: rgb(233,128,103);
-        position: relative;
-        top: 50%;
-        transform: translateY(-75%);
-        margin: 0;
-        padding: 0;
-      }
-      
-      .contact-text {
-        color: white;
-      }
-    </style>
-    
     <div class="wrapper-6">
     
       <div class="row justify-content-center mt-5 m-0 p-0 mr-lg-5 ml-lg-5 follow-row">
@@ -1035,23 +1041,28 @@
             <i class="fas fa-camera-retro"></i>
           </div>
         </div>
+          <a name="contact-title"></a>
       </div>
       
       <div class="row justify-content-center">
         <div class="col-6 col-md-3">
           <p class="contact-title">Contact us</p>
-          <div class="row justify-content-center">
-            <div class="col-12">
-              <form method="post" action="">
-                <input type="text" name="name" placeholder="Email" class="contact-input"/>
-                <textarea rows="4" placeholder="Comment" class="contact-input"></textarea>
-              </form>
-            </div>
-          </div>
         </div>
+      </div>
+      <div class="row justify-content-center m-0 p-0">
+        <div class="col-6 col-md-4 m-0 p-0">
+          <form method="post" action="">
+            <input type="text" name="name" placeholder="Email" class="contact-input"/>
+            <textarea rows="4" placeholder="Comment" class="contact-input"></textarea>
+          </form>
+        </div>
+      </div>
+      <div class="row justify-content-center">
         <div class="col-12" style="text-align: center;">
           <div class="envelope-container"><i class="fas fa-envelope"></i></div>
         </div>
+      </div>
+      <div class="row justify-content-center">
         <div class="col-6 col-md-3 mt-4">
           <p class="contact-text">Hungary, 3000, Hatvan, Kitudja utca 23.</p>
           <p class="contact-text">Eu fugit maiorum molestiae cum, in mel clita facete mediocrem, putent elaboraret mel ne. Legere electram mea no.</p>
@@ -1059,18 +1070,6 @@
       </div>
           
     </div>
-    
-    <style>
-      .wrapper-7 {
-        width: 100%;
-        height: 10rem;
-        background-image: url(assets/map.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        box-shadow: inset 0 15px 25px rgb(0,0,0,.3);
-      }
-    </style>
     
     <div class="wrapper-7"></div>
     
