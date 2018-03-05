@@ -188,6 +188,7 @@
 
       button:hover circle {
         fill: rgb(233,128,103);
+        cursor: pointer;
       }
 
       .btn-row {
@@ -198,6 +199,7 @@
         text-align: center;
         transition: all .8s ease-in-out;
       }
+      
 
       .circle-btn-active circle {
         fill: rgb(233,128,103);
@@ -300,6 +302,11 @@
         left: calc(50% - 5rem);
       }
       
+      .blog-container {
+        width: 12rem;
+        left: calc(50% - 6rem)
+      }
+      
       .capsula-title {
         color: rgb(255,50,50);
         font-family: pacifico;
@@ -327,6 +334,16 @@
         position: relative;
         left: calc(50% - 2rem);
         border-radius: .3rem;
+      }
+      
+      @media (max-width: 768px) {
+        .capsula-btn {
+          width: 8rem;
+          height: 2.5rem;
+          padding-top: .45rem;
+          left: calc(50% - 4rem);
+          font-size: 1rem;
+        }
       }
  
       .wrapper-3 {
@@ -438,14 +455,16 @@
         transform: translateY(-20%);
       }
       
-      .project-container:hover .project-img {
+      .project-container:hover .project-img,
+      .blog-img-container:hover .project-img {
         transform: scale3d(1,1,1);
         opacity: .7;
         cursor: pointer;
       }
       
       .project-container:hover .project-img-icon,
-      .project-container:hover .project-img-title {
+      .project-container:hover .project-img-title,
+      .blog-img-container:hover .project-img-icon {
         opacity: 1;
       }
       
@@ -563,6 +582,20 @@
         padding-top: 1rem;
       }
       
+      .blog-img-container {
+        width: 12rem;
+        height: 12rem;
+        position: relative;
+        top: 0;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: black;
+        left: calc(50% - 6rem);
+        border: .8rem solid white;
+        transform: translateY(-50%);
+      }
+        
       .blog-rate {
         padding: 0;
         margin: 0;
@@ -575,9 +608,9 @@
       }
       
       .blog-container {
-        width: 7rem;
+        width: 12rem;
         position: relative;
-        left: calc(50% - 3.5rem);
+        left: calc(50% - 6rem);
         padding: 0;
         margin: 0;
         margin-top: -3.5rem;
@@ -585,8 +618,8 @@
       
       @media (min-width: 576px) {
         .blog-container {
-          width: 10rem;
-          left: calc(50% - 5rem);
+          width: 14rem;
+          left: calc(50% - 7rem);
           margin-top: -5rem;
         }
       }
@@ -605,6 +638,32 @@
         font-size: 1.2rem;
         font-family: "pacifico";
         text-align: center;
+      }
+      
+      .first, 
+      .second,
+      .third {
+        opacity: 0;
+        transition: all .6s ease-in-out;
+        display: none;
+      }
+      
+      .blog-active {
+        opacity: 1;
+        display: block;
+      }
+      
+      @media (min-width: 768px) {
+        .blog-btn-row {
+          display: none;
+        }
+        
+        .first,
+        .second,
+        .third {
+          display: block;
+          opacity: 1;
+        }
       }
       
       .follow-title {
@@ -774,7 +833,7 @@
     <div class="wrapper-2">
       
       <div class="row justify-content-center m-0 p-0 mr-lg-5 ml-lg-5 mb-5">
-        <div class="col-6 col-md-3">
+        <div class="col-5 col-md-3">
           <div class="capsula">
             <i class="fas fa-bus"></i>
           </div>
@@ -961,8 +1020,8 @@
     <div class="wrapper-5">
     
       <div class="row justify-content-center mr-5 ml-5 m-0 p-0 row-blog-imgs">
-        <div class="col-4 m-0 p-0">
-          <div class="project-container">
+        <div class="col-10 col-md-4 m-0 p-0 first blog-active">
+          <div class="blog-img-container">
             <img src="assets/img07.jpg" alt="" class="project-img"/>
             <div class="project-items-container">
               <div class="project-img-icon">
@@ -977,8 +1036,8 @@
             <div class="capsula-btn">More</div>
           </div>
         </div>
-        <div class="col-4 m-0 p-0">
-          <div class="project-container">
+        <div class="col-10 col-md-4 m-0 p-0 second">
+          <div class="blog-img-container">
             <img src="assets/img08.jpg" alt="" class="project-img"/>
             <div class="project-items-container">
               <div class="project-img-icon">
@@ -987,13 +1046,13 @@
             </div>
           </div>
           <div class="blog-container p-0">
-            <p class="blog-container-title">Eu fugit maiorum molestiae cum.</p>
-            <p class="blog-container-text">Minim error appellantur vel ei, eum nonumes antiopam delicatissimi ne. Ridens dignissim hendrerit eu his, ea pri harum consectetuer, id brute sadipscing mel.</p>
+            <p class="blog-container-title">Eu fugit molestiae cum.</p>
+            <p class="blog-container-text">Minim error appellantur vel ei, eum nonumes antiopam delicatissimi ne. Ridens dignissim hendrerit eu his, ea pri harum consectetuer, id brute sadipscing mel. Minim error appellantur vel ei, eum nonumes antiopam delicatissimi ne.</p>
             <div class="capsula-btn">More</div>
           </div>
         </div>
-        <div class="col-4 m-0 p-0">
-          <div class="project-container">
+        <div class="col-10 col-md-4 m-0 p-0 third blog-full-wrapper">
+          <div class="blog-img-container">
             <img src="assets/img09.jpg" alt="" class="project-img"/>
             <div class="project-items-container">
               <div class="project-img-icon">
@@ -1008,8 +1067,27 @@
             <div class="capsula-btn">More</div>
           </div>
         </div>
+      </div>
+      <div class="p-0 m-0 row justify-content-center btn-row mt-5 blog-btn-row">
+        <div class="col-3 col-lg-1 align-self-center p-0 m-0">
+          <button class="btn-2 circle-btn-active" rel="first">
+            <svg height="1rem" width="1rem">
+              <circle cx=".5rem" cy=".5rem" r=".4rem" stroke="rgb(210,210,210)" stroke-width=".15rem" fill="none"/>
+            </svg>
+          </button>
+          <button class="btn-2" rel="second">
+            <svg height="1rem" width="1rem">
+              <circle cx=".5rem" cy=".5rem" r=".4rem" stroke="rgb(210,210,210)" stroke-width=".15rem" fill="none"/>
+            </svg>
+          </button>
+          <button class="btn-2" rel="third">
+            <svg height="1rem" width="1rem">
+              <circle cx=".5rem" cy=".5rem" r=".4rem" stroke="rgb(210,210,210)" stroke-width=".15rem" fill="none"/>
+            </svg>
+          </button>
         </div>
-      
+      </div>
+
       <div class="row justify-content-center mt-5 pt-5 mb-5 pb-5">
         <div class="col-6">
           <p class="follow-title">Follow us</p>
@@ -1097,6 +1175,15 @@
         
       // disable scrolling 
       window.addEventListener('scroll', noscroll);
+      
+      $('.btn-2').on('click', function() {
+          $('.blog-active').removeClass('blog-active');
+          $('.circle-btn-active').removeClass('circle-btn-active');
+          var $rel = $(this).attr('rel');
+          $(this).addClass('circle-btn-active');
+          $('.' + $rel).addClass('blog-active');
+        
+      })
     }();
   </script>
     
