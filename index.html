@@ -25,32 +25,32 @@
     <style>
       
       html {
-        font-size: 11.5px;
+        font-size: 13px;
         padding: 0;
         margin: 0;
       }
       
       @media (min-width: 576px) {
         html {
-          font-size: 13px;
+          font-size: 15px;
         }
       }
       
       @media (min-width: 768px) {
         html {
-          font-size: 15px;
+          font-size: 17.5px;
         }
       }
       
       @media (min-width: 992px) {
         html {
-          font-size: 17.5px;
+          font-size: 20px;
         }
       }
       
       @media (min-width: 1200px) {
         html {
-          font-size: 20px;
+          font-size: 22px;
         }
       }
     
@@ -80,8 +80,20 @@
       }
       
       .container-open .sliding-header {
-        transform: translate3d(0, -100%, 0) translate3d(0, 5rem, 0);
+        transform: translate3d(0, -100%, 0) translate3d(0, 10rem, 0);
         box-shadow: 0 0 1rem rgba(0,0,0,.5);
+      }
+      
+      @media (min-width: 576px) {
+        .container-open .sliding-header {
+          transform: translate3d(0,-100%,0) translate3d(0,8rem,0);
+        }
+      }
+
+      @media (min-width: 768px) {
+        .container-open .sliding-header {
+          transform: translate3d(0,-100%,0) translate3d(0,5rem,0);
+        }
       }
       
       .header-img {
@@ -125,7 +137,7 @@
       .nav-menu {
         color: whitesmoke;
         text-align: center;
-        font-size: .8rem;
+        font-size: 1rem;
         font-family: "pacifico";
         padding: 0;
         margin: 0;
@@ -133,13 +145,26 @@
         transition: all .3s ease-in-out;
       }
       
+      @media (min-width: 768px) {
+        .nav-menu {
+          font-size: .8rem;
+        }
+      }
+      
       .nav-menu:hover {
         transform: scale3d(1.5,1.5,1);
         color: rgb(233,210,210);
       }
       
-      .nav-border {
+      .nav-border,
+      .portfolio-nav {
         border-left: .1rem rgba(255,255,255,.3) solid;
+      }
+      
+      @media (max-width: 576px) {
+        .portfolio-nav {
+          border-left: none;
+        }
       }
       
       .header-title-row {
@@ -244,9 +269,22 @@
       
       .wrapper-1 {
         background-color: rgb(233,128,103);
-        padding: 8rem 0 12rem 0;
+        padding: 13rem 0 12rem 0;
         width: 100%;
         height: auto;
+        transition: all .8s ease-in-out;
+      }
+      
+      @media (min-width: 576px) {
+        .wrapper-1 {
+          padding: 11rem 0 12rem 0;
+        }
+      }
+      
+      @media (min-width: 768px) {
+        .wrapper-1 {
+          padding: 8rem 0 12rem 0;
+        }
       }
       
       .do-title, .project-title, .team-title, .blog-title, .follow-title, .contact-title {
@@ -260,12 +298,12 @@
       }
     
       .wrapper-2 {
-        padding: 0 3rem;
+        padding: 0 1rem;
       }
       
       @media (min-width: 768px) {
         .wrapper-2 {
-          padding: 0 6rem;
+          padding: 0 1rem;
         }
       }
       
@@ -279,6 +317,22 @@
         left: calc(50% - 5rem);
         transform: translateY(-50%);
         text-align: center;
+      }
+      
+      @media (max-width: 576px) {
+        .wrapper-2 .capsula {
+          width: 13rem;
+          height: 13rem;
+          left: calc(50% - 6.5rem);
+          margin-top: 3rem;
+        }
+        
+        .fa-bus,
+        .fa-ship,
+        .fa-space-shuttle,
+        .fa-train {
+          font-size: 6rem;
+        }
       }
       
       .fa-bus,
@@ -302,6 +356,13 @@
         left: calc(50% - 5rem);
       }
       
+      @media (max-width: 576px) {
+        .wrapper-2 .capsula-container {
+          width: 13rem;
+          left: calc(50% - 6.5rem);
+        }
+      }
+      
       .blog-container {
         width: 12rem;
         left: calc(50% - 6rem)
@@ -320,6 +381,10 @@
         font-size: .85rem;
         text-align: center;
         line-height: 1.4;
+      }
+      
+      @media (max-width: 576px) {
+        
       }
       
       .capsula-btn {
@@ -358,14 +423,15 @@
       }
       
       .project-container {
-        width: 7rem;
-        height: 7rem;
+        width: 8rem;
+        height: 8rem;
         text-align: center;
         overflow: hidden;
         border-radius: 50%;
         background-color: black;
         position: relative;
-        left: calc(50% - 3.5rem);
+        left: calc(50% - 4rem);
+        transform: translateY(50%);
       }
 
       .project-items-container {
@@ -395,25 +461,17 @@
         .project-items-container {
           top: 30%;
         }
-        
-        .row-project-img-2 .project-container {
-          left: calc(50% - 5.8rem);
-        }
       }
 
       @media (min-width: 768px) {
         .project-container {
-          width: 12rem;
-          height: 12rem;
-          left: calc(50% - 6rem);
+          width: 10rem;
+          height: 10rem;
+          left: calc(50% - 5rem);
         }
         
         .project-items-container {
           top: 40%;
-        }
-        
-        .row-project-img-2 .project-container {
-          left: calc(50% - 6.8rem);
         }
       }
       
@@ -468,8 +526,26 @@
         opacity: 1;
       }
       
-      .row-project-img-2 {
+      .under-img-2,
+      .under-img-3 {
         transform: translateY(50%);
+        border: .8rem solid white;
+        box-sizing: content-box;
+        left: calc(50% - 4.8rem);
+      }
+      
+      @media (min-width: 576px) {
+        .under-img-1 {
+          transform: translateY(50%);
+          border: .8rem solid white;
+          box-sizing: content-box;
+        }
+        
+        .under-img-1,
+        .under-img-2,
+        .under-img-3 {
+          left: calc(50% - 5.8rem);
+        }
       }
       
       .wrapper-4 {
@@ -745,6 +821,7 @@
       
       .row {
         margin-right: 0px;
+        margin-left: 0px;
       }
     </style>
     
@@ -755,27 +832,27 @@
     <div id="container" class="open-container">
       
       <div class="row justify-content-center row-navbar">
-        <div class="col-3 col-md-5 align-self-center">
+        <div class="col-12 col-md-5 align-self-center p-0 m-0">
           <p class="nav-title">Jeexo</p>
         </div>
-        <div class="col-8 col-md-6 align-self-center mr-md-5 pr-md-5 pl-md-0 pr-0 mr-0">
+        <div class="col-11 col-md-6 align-self-center mr-md-5 pr-md-5 pl-md-0 pr-0 mr-0">
           <div class="row justify-content-end">
-            <div class="col-2 p-0 m-0">
+            <div class="col-4 col-sm-2 p-0 m-0">
             <p class="nav-menu" id="close-button"><a href="#">home</a></p>
             </div>
-            <div class="col-2 p-0 m-0 nav-border">
+            <div class="col-4 col-sm-2 p-0 m-0 nav-border">
             <p class="nav-menu"><a href="#about">about</a></p>
             </div>
-            <div class="col-2 p-0 m-0 nav-border">
+            <div class="col-4 col-sm-2 p-0 m-0 nav-border">
             <p class="nav-menu"><a href="#">services</a></p>
             </div>
-            <div class="col-2 p-0 m-0 nav-border">
+            <div class="col-4 col-sm-2 p-0 m-0 nav-border portfolio-nav">
             <p class="nav-menu"><a href="#portfolio">portfolio</a></p>
             </div>
-            <div class="col-2 p-0 m-0 nav-border">
+            <div class="col-4 col-sm-2 p-0 m-0 nav-border">
             <p class="nav-menu"><a href="#blog">blog</a></p>
             </div>
-            <div class="col-2 p-0 m-0 nav-border">
+            <div class="col-4 col-sm-2 p-0 m-0 nav-border">
             <p class="nav-menu"><a href="#contact-title">contact</a></p>
             </div>
           </div>
@@ -824,7 +901,7 @@
     <a name="about"></a>
     <div class="wrapper-1">
       <div class="row justify-content-center">
-        <div class="col-6">
+        <div class="col-11 p-0 m-0">
           <p class="do-title">What we do?</p>
         </div>
       </div>
@@ -833,8 +910,8 @@
     <div class="wrapper-2">
       
       <div class="row justify-content-center m-0 p-0 mr-lg-5 ml-lg-5 mb-5">
-        <div class="col-5 col-md-3">
-          <div class="capsula">
+        <div class="col-7 col-sm-5 col-md-3">
+          <div class="capsula m-0">
             <i class="fas fa-bus"></i>
           </div>
           <div class="capsula-container">
@@ -843,7 +920,7 @@
             <div class="capsula-btn">More</div>
           </div>
         </div>
-        <div class="col-5 col-md-3">
+        <div class="col-7 col-sm-5 col-md-3">
           <div class="capsula">
             <i class="fas fa-train"></i>
           </div>
@@ -853,7 +930,7 @@
             <div class="capsula-btn">More</div>
           </div>
         </div>
-        <div class="col-5 col-md-3">
+        <div class="col-7 col-sm-5 col-md-3">
           <div class="capsula">
             <i class="fas fa-space-shuttle"></i>
           </div>
@@ -863,7 +940,7 @@
             <div class="capsula-btn">More</div>
           </div>
         </div>
-        <div class="col-5 col-md-3">
+        <div class="col-7 col-sm-5 col-md-3">
           <div class="capsula">
             <i class="fas fa-ship"></i>
           </div>
@@ -880,15 +957,15 @@
     
     <div class="wrapper-3">
     
-      <div class="row justify-content-center mb-5 m-0 p-0">
+      <div class="row justify-content-center m-0 p-0">
         <div class="col-6 m-0 p-0">
           <p class="project-title">Look at the projects</p>
         </div>
       </div>
       
-      <div class="row justify-content-center mr-5 ml-5 m-0 p-0">
-        <div class="col-4">
-          <div class="project-container">
+      <div class="row justify-content-center mr-3 ml-3 m-0 p-0">
+        <div class="col-6 col-sm-4 mb-4 mb-sm-5">
+          <div class="project-container mb-4 mb-sm-0">
             <img src="assets/img01.jpeg" alt="" class="project-img"/>
             <div class="project-items-container">
               <div class="project-img-icon"><i class="fas fa-search"></i></div>
@@ -897,7 +974,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-sm-4 mb-4 mb-sm-5">
           <div class="project-container">
             <img src="assets/img02.jpg" alt="" class="project-img"/>
             <div class="project-items-container">
@@ -907,7 +984,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-sm-4 mb-4 mb-sm-0">
           <div class="project-container">
             <img src="assets/img03.jpg" alt="" class="project-img"/>
             <div class="project-items-container">
@@ -917,11 +994,9 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row justify-content-center mr-5 ml-5 m-0 p-0 row-project-img-2">
-        <div class="col-4">
-          <div class="project-container">
+        <div class="col-6 col-sm-4">
+          <div class="project-container under-img-1">
             <img src="assets/img04.jpg" alt="" class="project-img"/>
             <div class="project-items-container">
               <div class="project-img-icon"><i class="fas fa-search"></i></div>
@@ -930,8 +1005,8 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
-          <div class="project-container">
+        <div class="col-6 col-sm-4">
+          <div class="project-container under-img-2">
             <img src="assets/img05.jpg" alt="" class="project-img"/>
             <div class="project-items-container">
               <div class="project-img-icon"><i class="fas fa-search"></i></div>
@@ -940,8 +1015,8 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
-          <div class="project-container">
+        <div class="col-6 col-sm-4">
+          <div class="project-container under-img-3">
             <img src="assets/img06.jpg" alt="" class="project-img"/>
             <div class="project-items-container">
               <div class="project-img-icon"><i class="fas fa-search"></i></div>
@@ -956,7 +1031,7 @@
     <div class="wrapper-4">
     
       <div class="row justify-content-center mt-5 mb-5 pt-5 pb-5">
-        <div class="col-6">
+        <div class="col-11">
           <p class="team-title">Meet our team</p>
         </div>
       </div>
