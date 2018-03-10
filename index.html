@@ -80,7 +80,9 @@
       }
       
       .container-open .sliding-header {
-        transform: translate3d(0, -100%, 0) translate3d(0, 10rem, 0);
+        position: absolute;
+        margin: 0;
+        transform: translate3d(0, -100%, 0) translate3d(0, 12rem, 0);
         box-shadow: 0 0 1rem rgba(0,0,0,.5);
       }
       
@@ -124,6 +126,17 @@
         z-index: 20;
       }
       
+      .container-open .row-navbar {
+        position: absolute;
+      }
+      
+      @media (min-width: 768px) {
+        .container-open .sliding-header,
+        .container-open .row-navbar {
+          position: fixed;
+        }
+      }
+      
       .nav-title {
         color: whitesmoke;
         font-size: 2.5rem;
@@ -143,6 +156,12 @@
         margin: 0;
         transform-origin: center center;
         transition: all .3s ease-in-out;
+      }
+      
+      @media (max-width: 576px) {
+        .nav-menu {
+          font-size: 1.25rem;
+        }
       }
       
       @media (min-width: 768px) {
@@ -170,7 +189,13 @@
       .header-title-row {
         position: relative;
         top: 40%;
-        transform: translate3d(0, -35%, 0);
+        transform: translate3d(0, -25%, 0);
+      }
+      
+      @media (min-width: 576px) {
+        .header-title-row {
+          transform: translate3d(0, -35%, 0);
+        }
       }
       
       .map-marker {
@@ -198,12 +223,18 @@
       .header-text {
         color: whitesmoke;
         font-family: martel;
-        font-size: .85rem;
+        font-size: 1rem;
         text-align: center;
         padding-top: 1.5rem;
         line-height: 1.2;
         opacity: 1;
         transition: all .8s ease-in-out;
+      }
+      
+      @media (min-width: 576px) {
+        .header-text {
+          font-size: .85rem;
+        }
       }
 
       button {
@@ -269,7 +300,8 @@
       
       .wrapper-1 {
         background-color: rgb(233,128,103);
-        padding: 13rem 0 12rem 0;
+        padding: 15rem 0 12rem 0;
+        margin-top: 0;
         width: 100%;
         height: auto;
         transition: all .8s ease-in-out;
@@ -383,10 +415,15 @@
         line-height: 1.4;
       }
       
-      @media (max-width: 576px) {
+      @media (max-width: 576px) {      
+        .capsula-title {
+          font-size: 1.5rem;
+        }
         
+        .capsula-text, .blog-container-text, .contact-text {
+          font-size: 1rem;
+        }
       }
-      
       .capsula-btn {
         width: 4rem;
         height: 1.5rem;
@@ -400,6 +437,7 @@
         left: calc(50% - 2rem);
         border-radius: .3rem;
       }
+      
       
       @media (max-width: 768px) {
         .capsula-btn {
@@ -591,6 +629,7 @@
       .team-icon {
         text-align: center;
         color: rgb(133,133,133);
+        font-size: 1.5rem;
       }
       
       .fa-facebook-f:hover,
@@ -610,6 +649,34 @@
         border-radius: 50%;
         transform-origin: center center;
         transition: all .3s ease-in-out;
+      }
+      
+      @media (max-width: 576px) {
+        .team-row .capsula {
+          width: 15rem;
+          height: 15rem;
+          left: calc(50% - 7.5rem);
+        }
+        
+        .team-row .capsula-container {
+          width: 15rem;
+          left: calc(50% - 7.5rem);
+          margin-top: -7.5rem;
+          border-radius: 0 0 7.5rem 7.5rem;
+          padding: 7.5rem 1rem 1rem 1rem;
+        }
+        
+        .team-row .capsula-title {
+          font-size: 1.5rem;
+        }
+        
+        .team-little-title {
+          font-size: .9rem;
+        }
+        
+        .team-row .capsula-text {
+          font-size: 1rem;
+        }
       }
       
       .team-row .team-capsula:hover .capsula-title {
@@ -711,7 +778,7 @@
       .blog-container-title {
         color: rgb(233,128,103);
         line-height: 1.2;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-family: "pacifico";
         text-align: center;
       }
@@ -837,13 +904,13 @@
         </div>
         <div class="col-11 col-md-6 align-self-center mr-md-5 pr-md-5 pl-md-0 pr-0 mr-0">
           <div class="row justify-content-end">
-            <div class="col-4 col-sm-2 p-0 m-0">
+            <div class="col-4 col-sm-2 p-0 m-0 mb-3 mb-sm-0">
             <p class="nav-menu" id="close-button"><a href="#">home</a></p>
             </div>
-            <div class="col-4 col-sm-2 p-0 m-0 nav-border">
+            <div class="col-4 col-sm-2 p-0 m-0 nav-border mb-3 mb-sm-0">
             <p class="nav-menu"><a href="#about">about</a></p>
             </div>
-            <div class="col-4 col-sm-2 p-0 m-0 nav-border">
+            <div class="col-4 col-sm-2 p-0 m-0 nav-border mb-3 mb-sm-0">
             <p class="nav-menu"><a href="#">services</a></p>
             </div>
             <div class="col-4 col-sm-2 p-0 m-0 nav-border portfolio-nav">
@@ -866,7 +933,7 @@
           <div class="col-12 m-0 p-0">
             <p class="map-marker"><i class="fas fa-map-marker-alt"></i></p>
           </div>
-          <div class="col-9">
+          <div class="col-11 col-sm-9 p-0">
             <p class="header-title">We were here</p>
             <p class="header-text pl-md-5 pr-md-5 text-1">Lorem ipsum dolor sit amet, quod everti pertinacia his eu, vis et vitae gloriatur definitionem. Ex graeco forensibus adipiscing sit, adhuc utinam ancillae duo ex, id utinam invidunt nec. No sed iusto virtute phaedrum, legimus albucius eam eu, eirmod animal reprimique pri in. Ad quis voluptaria elaboraret nam. Ut mea quis placerat disputando, ius iusto moderatius eu, omnesque iudicabit comprehensam vim ne.</p>
           </div>
@@ -1037,7 +1104,7 @@
       </div>
 
       <div class="row justify-content-center m-0 p-0 mr-lg-5 ml-lg-5 mb-5 mt-5 team-row">
-        <div class="col-5 col-md-3 team-capsula">
+        <div class="col-10 col-sm-5 col-md-3 team-capsula">
           <div class="capsula">
             <img class="team-img" src="assets/face03.jpg" alt=""/>
           </div>
@@ -1048,7 +1115,7 @@
             <p class="team-icon"><i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i></p>
           </div>
         </div>
-        <div class="col-5 col-md-3 team-capsula">
+        <div class="col-10 col-sm-5 col-md-3 team-capsula">
           <div class="capsula">
             <img class="team-img" src="assets/face02.jpg" alt=""/>
           </div>
@@ -1059,7 +1126,7 @@
             <p class="team-icon"><i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i></p>
           </div>
         </div>
-        <div class="col-5 col-md-3 team-capsula">
+        <div class="col-10 col-sm-5 col-md-3 team-capsula">
           <div class="capsula">
             <img class="team-img" src="assets/face01.jpg" alt=""/>
           </div>
@@ -1070,7 +1137,7 @@
             <p class="team-icon"><i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i></p>
           </div>
         </div>
-        <div class="col-5 col-md-3 team-capsula">
+        <div class="col-10 col-sm-5 col-md-3 team-capsula">
           <div class="capsula">
             <img class="team-img" src="assets/face04.jpg" alt=""/>
           </div>
@@ -1198,12 +1265,12 @@
       </div>
       
       <div class="row justify-content-center">
-        <div class="col-6 col-md-3">
+        <div class="col-10 col-md-3">
           <p class="contact-title">Contact us</p>
         </div>
       </div>
       <div class="row justify-content-center m-0 p-0">
-        <div class="col-6 col-md-4 m-0 p-0">
+        <div class="col-10 col-sm-8 col-md-6 col-lg-4 m-0 p-0">
           <form method="post" action="">
             <input type="text" name="name" placeholder="Email" class="contact-input"/>
             <textarea rows="4" placeholder="Comment" class="contact-input"></textarea>
@@ -1216,7 +1283,7 @@
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-6 col-md-3 mt-4">
+        <div class="col-11 col-sm-8 col-md-6 col-lg-3 mt-4 p-0">
           <p class="contact-text">Hungary, 3000, Hatvan, Kitudja utca 23.</p>
           <p class="contact-text">Eu fugit maiorum molestiae cum, in mel clita facete mediocrem, putent elaboraret mel ne. Legere electram mea no.</p>
         </div>   
